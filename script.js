@@ -12,7 +12,7 @@ const totalAmountDisplay = document.getElementById("total-amount");
 let expenses = JSON.parse(localStorage.getItem("expenses")) || [];
 let totalAmount = 0;
 
-// FUNCTIONS
+// --- FUNCTIONS ---
 
 // Update total amount display
 function updateTotalAmount() {
@@ -49,7 +49,7 @@ function renderExpenses() {
     amountCell.style.color = expense.amount < 0 ? "red" : "green";
 
     // --- Restore cell styling ---
-    [descriptionCell, amountCell, actionCell].forEach(cell => {
+    [descriptionCell, amountCell, actionCell].forEach((cell) => {
       cell.style.border = "1px solid #ddd";
       cell.style.padding = "8px";
       cell.style.textAlign = "center";
@@ -120,6 +120,5 @@ clearAllBtn.addEventListener("click", function () {
 // Event listeners
 expenseForm.addEventListener("submit", addExpense);
 
-//INITIALIZE
+// --- INITIALIZE ---
 renderExpenses();
-
