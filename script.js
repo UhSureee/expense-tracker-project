@@ -12,7 +12,7 @@ const totalAmountDisplay = document.getElementById("total-amount");
 let expenses = JSON.parse(localStorage.getItem("expenses")) || [];
 let totalAmount = 0;
 
-// --- FUNCTIONS ---
+// FUNCTIONS
 
 // Update total amount display
 function updateTotalAmount() {
@@ -120,5 +120,6 @@ clearAllBtn.addEventListener("click", function () {
 // Event listeners
 expenseForm.addEventListener("submit", addExpense);
 
-// --- INITIALIZE ---
+//INITIALIZE
 renderExpenses();
+
